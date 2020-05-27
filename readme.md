@@ -1,0 +1,1 @@
+Run file system operations over a transaction system, commiting them when everything went right. Uses a custom stream wrapper for a php stream.
