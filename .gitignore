@@ -1,0 +1,12 @@
+*.sh
+.buildpath
+.project
+.settings
+todo
+/vendor/
+/phpdoc/
+/.php_cs
+/.php_cs.cache
+/.phpunit.result.cache
+/composer.lock
+.idea/

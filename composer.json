@@ -1,0 +1,42 @@
+{
+	"name": "holonet/fstransact",
+	"description": "Filesystem operations on a transaction system with rollback and commit",
+	"type": "library",
+	"authors": [
+		{
+			"name": "Matthias Lantsch",
+			"email": "matthias.lantsch@bluewin.ch"
+		}
+	],
+	"autoload": {
+		"psr-4": {
+			"holonet\\fstransact\\": "src"
+		}
+	},
+	"autoload-dev": {
+		"psr-4": {
+			"holonet\\fstransact\\tests\\": "tests"
+		}
+	},
+	"require": {
+		"php": ">=7.3",
+		"covex-nn/vfs": "^1.0"
+	},
+	"require-dev": {
+		"friendsofphp/php-cs-fixer": "^2.11",
+		"vimeo/psalm": "^3.5",
+		"symfony/var-dumper": "^5.0",
+		"phpunit/phpunit": "^8.4.1"
+	},
+	"scripts": {
+		"fix": [
+			"@php -d memory_limit=-1 vendor/friendsofphp/php-cs-fixer/php-cs-fixer fix --verbose --ansi"
+		],
+		"test": [
+			"@composer validate",
+			"@php -d memory_limit=-1 vendor/phpunit/phpunit/phpunit",
+			"@php -d memory_limit=-1 vendor/friendsofphp/php-cs-fixer/php-cs-fixer fix --verbose --dry-run --ansi",
+			"@php -d memory_limit=-1 vendor/vimeo/psalm/psalm"
+		]
+	}
+}
