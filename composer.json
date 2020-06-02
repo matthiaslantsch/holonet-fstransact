@@ -1,6 +1,12 @@
 {
 	"name": "holonet/fstransact",
 	"description": "Filesystem operations on a transaction system with rollback and commit",
+	"license": "WTFPL",
+	"keywords": [
+		"filesystem",
+		"transaction",
+		"virtual file system"
+	],
 	"type": "library",
 	"authors": [
 		{

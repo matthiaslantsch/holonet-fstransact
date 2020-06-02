@@ -1,4 +1,5 @@
-#Filesystem transaction library
+Filesystem transaction library
+==============================
 
 Symfony Filesystem class wrapper using a custom php stream wrapper ([covex-nn/vfs](https://github.com/covex-nn/vfs)) to run filesystem operations
 on a virtual simulated filesystem instead based on a transaction (like in a database).
